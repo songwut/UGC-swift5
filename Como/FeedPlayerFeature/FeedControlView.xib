@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedControlView" customModule="Como" customModuleProvider="target">
+            <connections>
+                <outlet property="downButton" destination="mdk-VP-Lsq" id="63K-jU-aZg"/>
+                <outlet property="timeLabel" destination="cYW-ef-UZu" id="k5l-WP-PIr"/>
+                <outlet property="userImageView" destination="ap7-G6-zEw" id="f0r-Tv-nhr"/>
+                <outlet property="userNameLabel" destination="VEZ-4K-sOu" id="46T-bB-lyD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap7-G6-zEw" customClass="CustomImageView" customModule="Como" customModuleProvider="target">
+                    <rect key="frame" x="8" y="8" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.71764705880000002" green="0.75294117650000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEZ-4K-sOu">
+                    <rect key="frame" x="56" y="8" width="200" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.27058823529999998" green="0.32549019610000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYW-ef-UZu">
+                    <rect key="frame" x="56" y="28" width="200" height="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.27058823529999998" green="0.32549019610000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upd-6R-KlP">
+                    <rect key="frame" x="542" y="542" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="hhT-Cu-fvc"/>
+                        <constraint firstAttribute="height" constant="50" id="t5U-lT-sno"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" image="btn_like_empty"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdk-VP-Lsq">
+                    <rect key="frame" x="280" y="560" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Cp7-B7-tq6"/>
+                        <constraint firstAttribute="height" constant="40" id="EWD-Xc-sQV"/>
+                    </constraints>
+                    <size key="titleShadowOffset" width="0.0" height="1"/>
+                    <state key="normal" image="icon_up_arrow">
+                        <color key="titleShadowColor" red="0.27058823529999998" green="0.32549019610000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="upButtonPressed:" destination="-1" eventType="touchUpInside" id="3tu-d6-C6j"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="upd-6R-KlP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="Awz-c2-C7Y"/>
+                <constraint firstAttribute="bottom" secondItem="mdk-VP-Lsq" secondAttribute="bottom" id="Okq-b1-raC"/>
+                <constraint firstItem="upd-6R-KlP" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="eGK-5P-ryG"/>
+                <constraint firstItem="mdk-VP-Lsq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oQE-cJ-JgN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_like_empty" width="85" height="85"/>
+        <image name="icon_up_arrow" width="128" height="128"/>
+    </resources>
+</document>

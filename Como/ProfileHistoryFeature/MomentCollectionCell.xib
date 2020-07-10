@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MomentCollectionCell" customModule="Como" customModuleProvider="target">
+            <connections>
+                <outlet property="detailLabel" destination="RM2-4H-CyB" id="crn-jS-ed6"/>
+                <outlet property="momentImageView" destination="djW-nR-lZr" id="ibA-M5-QzC"/>
+                <outlet property="timeLabel" destination="GQg-fA-Ubv" id="LOJ-KS-1U5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MomentCollectionCell" id="gTV-IL-0wX">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcV-82-OOf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djW-nR-lZr">
+                                <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.75294117650000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="djW-nR-lZr" secondAttribute="height" multiplier="1:1" id="EL4-5f-t3j"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="320 views . 28 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM2-4H-CyB">
+                                <rect key="frame" x="80" y="35" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XQu-GH-H39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.74901960779999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-d9-IwS">
+                                <rect key="frame" x="262" y="15" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ZrW-Lw-cgQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="a3j-Df-xdd"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Button" image="btn_download_circle_green"/>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="-1" eventType="touchUpInside" id="Yii-to-rUu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock_xs" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-iv-SXY">
+                                <rect key="frame" x="80" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="18J-Ab-bXa"/>
+                                    <constraint firstAttribute="height" constant="20" id="O9R-xL-o61"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 min ago " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQg-fA-Ubv">
+                                <rect key="frame" x="103" y="15" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TjF-XX-vgn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.090196078430000007" green="0.086274509799999996" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IT6-d9-IwS" secondAttribute="trailing" constant="8" id="1Uc-BJ-ZeO"/>
+                            <constraint firstItem="GQg-fA-Ubv" firstAttribute="leading" secondItem="Olh-iv-SXY" secondAttribute="trailing" constant="3" id="DJf-mG-rFi"/>
+                            <constraint firstItem="RM2-4H-CyB" firstAttribute="centerY" secondItem="qcV-82-OOf" secondAttribute="centerY" constant="10" id="GbP-PM-vDu"/>
+                            <constraint firstItem="Olh-iv-SXY" firstAttribute="leading" secondItem="djW-nR-lZr" secondAttribute="trailing" constant="8" id="I3z-2I-UpB"/>
+                            <constraint firstItem="IT6-d9-IwS" firstAttribute="leading" secondItem="GQg-fA-Ubv" secondAttribute="trailing" constant="8" id="K4A-dH-7bm"/>
+                            <constraint firstItem="Olh-iv-SXY" firstAttribute="centerY" secondItem="qcV-82-OOf" secondAttribute="centerY" constant="-10" id="Lhe-cv-6uy"/>
+                            <constraint firstAttribute="bottom" secondItem="djW-nR-lZr" secondAttribute="bottom" constant="8" id="QoP-Jv-I0c"/>
+                            <constraint firstItem="IT6-d9-IwS" firstAttribute="leading" secondItem="RM2-4H-CyB" secondAttribute="trailing" constant="8" id="XqN-xR-w3O"/>
+                            <constraint firstItem="RM2-4H-CyB" firstAttribute="leading" secondItem="djW-nR-lZr" secondAttribute="trailing" constant="8" id="YIh-EN-W6N"/>
+                            <constraint firstItem="djW-nR-lZr" firstAttribute="top" secondItem="qcV-82-OOf" secondAttribute="top" constant="8" id="YND-l3-hFv"/>
+                            <constraint firstItem="djW-nR-lZr" firstAttribute="leading" secondItem="qcV-82-OOf" secondAttribute="leading" constant="8" id="mIh-MS-QzU"/>
+                            <constraint firstItem="GQg-fA-Ubv" firstAttribute="centerY" secondItem="qcV-82-OOf" secondAttribute="centerY" constant="-10" id="tDq-jx-tVx"/>
+                            <constraint firstItem="IT6-d9-IwS" firstAttribute="centerY" secondItem="qcV-82-OOf" secondAttribute="centerY" id="z5L-dT-qm7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qcV-82-OOf" secondAttribute="bottom" id="Bwp-Sg-Rjs"/>
+                <constraint firstItem="qcV-82-OOf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SbD-3O-HUY"/>
+                <constraint firstAttribute="trailing" secondItem="qcV-82-OOf" secondAttribute="trailing" id="diN-Op-VOT"/>
+                <constraint firstItem="qcV-82-OOf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="la7-cP-DsA"/>
+            </constraints>
+            <size key="customSize" width="232" height="50"/>
+            <point key="canvasLocation" x="297" y="199"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="btn_download_circle_green" width="96" height="96"/>
+        <image name="ic_clock_xs" width="48" height="48"/>
+    </resources>
+</document>
